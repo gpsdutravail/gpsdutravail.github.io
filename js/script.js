@@ -38,33 +38,33 @@ $(document).ready(function(){
 
 //---------------------------------- Main slider setup-----------------------------------------//
 
-// $('.mainSlider').flexslider({
-// 	animation: "fade",
-// 	slideshow: true,
-// 	directionNav:false,
-// 	controlNav: true,
-// 	animationSpeed: 1500
-// });
-//
-//
-// $('.mainSlider .slides li').css('height', $(window).height());
-//
-//
-// for(var i = 0; i < $('.mainSlider .slides li').length; i++){
-//
-//     var path = $('.mainSlider .slides li').eq(i).find('img.slide').attr('src');
-// 	$('.mainSlider .slides li').eq(i).addClass('parallax');
-//     $('.mainSlider .slides li').eq(i).css('backgroundImage', 'url("' + path + '")');
-//     $('.mainSlider .slides li').eq(i).find('img.slide').detach();
-//
-// }
-//
-//
-// $(document).scroll(function () {
-//
-//         var treshhold = Math.round($(window).scrollTop() / 5);
-//         $('li.parallax').css('backgroundPosition', '100% ' + treshhold + 'px');
-// });
+$('.mainSlider').flexslider({
+	animation: "fade",
+	slideshow: true,
+	directionNav:false,
+	controlNav: true,
+	animationSpeed: 1500
+});
+
+
+$('.mainSlider .slides li').css('height', $(window).height());
+
+
+for(var i = 0; i < $('.mainSlider .slides li').length; i++){
+
+    var path = $('.mainSlider .slides li').eq(i).find('img.slide').attr('src');
+	$('.mainSlider .slides li').eq(i).addClass('parallax');
+    $('.mainSlider .slides li').eq(i).css('backgroundImage', 'url("' + path + '")');
+    $('.mainSlider .slides li').eq(i).find('img.slide').detach();
+
+}
+
+
+$(document).scroll(function () {
+
+        var treshhold = Math.round($(window).scrollTop() / 5);
+        $('li.parallax').css('backgroundPosition', '100% ' + treshhold + 'px');
+});
 
 //---------------------------------- End main slider setup-----------------------------------------//
 
