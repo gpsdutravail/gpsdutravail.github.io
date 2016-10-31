@@ -73,32 +73,32 @@ $(document).ready(function(){
 //---------------------------------- Team hover -----------------------------------------//
 
 
-// $(".thumbs li a span").css({ opacity: 0 });
-//
-// $('.thumbs li a ').hover( function(){
-// 	$(this).children('span ').stop().animate({ opacity: 1 }, 'slow');
-// 	}, function(){
-// 	$(this).children('span ').stop().animate({ opacity: 0 }, 'slow');
-// });
-//
-//
-// $('.teamThumbs').each(function () {
-// 	    $('.teamThumbs li a').on('click', function(event){
-// 			event.preventDefault();
-// 		});
-//
-// 		$('.teamThumbs li a' ).hover(function() {
-// 			if($('.teamThumbs li a' ).hasClass('tactive')){
-// 				$('.thumbs li a span').stop().animate({ opacity: 0 }, 'slow');
-// 				$('.teamThumbs li a').removeClass('tactive');
-// 			}
-//
-// 			$(this).addClass('tactive');
-// 			$('.teamDetails .td').hide();
-// 			$($(this).attr('href')).show();
-// 	});
-//
-// });
+$(".thumbs li a span").css({ opacity: 0 });
+
+$('.thumbs li a ').hover( function(){
+	$(this).children('span ').stop().animate({ opacity: 1 }, 'slow');
+	}, function(){
+	$(this).children('span ').stop().animate({ opacity: 0 }, 'slow');
+});
+
+
+$('.teamThumbs').each(function () {
+	    $('.teamThumbs li a').on('click', function(event){
+			event.preventDefault();
+		});
+
+		$('.teamThumbs li a' ).hover(function() {
+			if($('.teamThumbs li a' ).hasClass('tactive')){
+				$('.thumbs li a span').stop().animate({ opacity: 0 }, 'slow');
+				$('.teamThumbs li a').removeClass('tactive');
+			}
+
+			$(this).addClass('tactive');
+			$('.teamDetails .td').hide();
+			$($(this).attr('href')).show();
+	});
+
+});
 
 
 //---------------------------------- End team hover-----------------------------------------//
@@ -107,38 +107,38 @@ $(document).ready(function(){
 //---------------------------------- Site slider-----------------------------------------//
 
 
-// $('.testiSlider').flexslider({
-// 	animation: "slide",
-// 	slideshow: true,
-// 	directionNav:false,
-// 	controlNav: true
-// });
-//
-// $('.clientSlider').flexslider({
-// 	animation: "slide",
-// 	slideshow: true,
-// 	directionNav:false,
-//  	itemWidth: 53,
-//     itemMargin: 0,
-//     minItems: 2,
-//     maxItems: 6,
-// 	controlNav: false
-// });
-//
-// $('.postSlider, .postSliderLarge').flexslider({
-// 	animation: "slide",
-// 	slideshow: true,
-// 	directionNav:false,
-// 	controlNav: true
-// });
-//
-//
-// $('.projectSlider').flexslider({
-//    	animation: "slide",
-// 	slideshow: true,
-// 	directionNav:false,
-// 	controlNav: true
-// });
+$('.testiSlider').flexslider({
+	animation: "slide",
+	slideshow: true,
+	directionNav:false,
+	controlNav: true
+});
+
+$('.clientSlider').flexslider({
+	animation: "slide",
+	slideshow: true,
+	directionNav:false,
+ 	itemWidth: 53,
+    itemMargin: 0,
+    minItems: 2,
+    maxItems: 6,
+	controlNav: false
+});
+
+$('.postSlider, .postSliderLarge').flexslider({
+	animation: "slide",
+	slideshow: true,
+	directionNav:false,
+	controlNav: true
+});
+
+
+$('.projectSlider').flexslider({
+   	animation: "slide",
+	slideshow: true,
+	directionNav:false,
+	controlNav: true
+});
 
 
 
@@ -148,7 +148,7 @@ $(document).ready(function(){
 
 //---------------------------------- Portfolio -----------------------------------------//
 
-// $(".desc").css({ opacity: 0 });
+$(".desc").css({ opacity: 0 });
 
 //--------------------------------- Hover animation for the elements of the portfolio --------------------------------//
 
