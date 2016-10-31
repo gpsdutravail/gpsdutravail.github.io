@@ -3,34 +3,34 @@
 
 //------------------------------------- Waiting for the entire site to load ------------------------------------------------//
 
-// jQuery(window).load(function() {
-// 		jQuery("#loaderInner").fadeOut();
-// 		jQuery("#loader").delay(400).fadeOut("slow");
-// });
-//
+jQuery(window).load(function() {
+		jQuery("#loaderInner").fadeOut();
+		jQuery("#loader").delay(400).fadeOut("slow");
+});
+
 $(document).ready(function(){
-// 	var header = $('.mainHeader'),
-// 	pos = header.offset();
-//
-// 	$(window).scroll(function(){
-// 		if($(this).scrollTop() > pos.top+20 && header.hasClass('default')){
-// 			header.fadeOut('fast', function(){
-// 				$(this).removeClass('default').addClass('switchedHeader').slideDown(200);
-// 			});
-// 		} else if($(this).scrollTop() <= pos.top+20 && header.hasClass('switchedHeader')){
-// 			header.slideUp(200, function(){
-// 				$(this).removeClass('switchedHeader').addClass('default').fadeIn(200);
-// 			});
-// 		}
-// });
+	var header = $('.mainHeader'),
+	pos = header.offset();
+
+	$(window).scroll(function(){
+		if($(this).scrollTop() > pos.top+20 && header.hasClass('default')){
+			header.fadeOut('fast', function(){
+				$(this).removeClass('default').addClass('switchedHeader').slideDown(200);
+			});
+		} else if($(this).scrollTop() <= pos.top+20 && header.hasClass('switchedHeader')){
+			header.slideUp(200, function(){
+				$(this).removeClass('switchedHeader').addClass('default').fadeIn(200);
+			});
+		}
+});
 
 
 //------------------------------------- Navigation setup ------------------------------------------------//
 
-$('a.scroll').smoothScroll({
-        speed: 800,
-        offset: -65
-});
+// $('a.scroll').smoothScroll({
+//         speed: 800,
+//         offset: -65
+// });
 
 //------------------------------------- End navigation setup ------------------------------------------------//
 
