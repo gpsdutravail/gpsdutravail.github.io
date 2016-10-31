@@ -7,30 +7,30 @@
 // 		jQuery("#loaderInner").fadeOut();
 // 		jQuery("#loader").delay(400).fadeOut("slow");
 // });
-
-$(document).ready(function(){
-	var header = $('.mainHeader'),
-	pos = header.offset();
-
-	$(window).scroll(function(){
-		if($(this).scrollTop() > pos.top+20 && header.hasClass('default')){
-			header.fadeOut('fast', function(){
-				$(this).removeClass('default').addClass('switchedHeader').slideDown(200);
-			});
-		} else if($(this).scrollTop() <= pos.top+20 && header.hasClass('switchedHeader')){
-			header.slideUp(200, function(){
-				$(this).removeClass('switchedHeader').addClass('default').fadeIn(200);
-			});
-		}
-});
+//
+// $(document).ready(function(){
+// 	var header = $('.mainHeader'),
+// 	pos = header.offset();
+//
+// 	$(window).scroll(function(){
+// 		if($(this).scrollTop() > pos.top+20 && header.hasClass('default')){
+// 			header.fadeOut('fast', function(){
+// 				$(this).removeClass('default').addClass('switchedHeader').slideDown(200);
+// 			});
+// 		} else if($(this).scrollTop() <= pos.top+20 && header.hasClass('switchedHeader')){
+// 			header.slideUp(200, function(){
+// 				$(this).removeClass('switchedHeader').addClass('default').fadeIn(200);
+// 			});
+// 		}
+// });
 
 
 //------------------------------------- Navigation setup ------------------------------------------------//
 
-$('a.scroll').smoothScroll({
-        speed: 800,
-        offset: -65
-});
+// $('a.scroll').smoothScroll({
+//         speed: 800,
+//         offset: -65
+// });
 
 //------------------------------------- End navigation setup ------------------------------------------------//
 
@@ -38,33 +38,33 @@ $('a.scroll').smoothScroll({
 
 //---------------------------------- Main slider setup-----------------------------------------//
 
-$('.mainSlider').flexslider({
-	animation: "fade",
-	slideshow: true,
-	directionNav:false,
-	controlNav: true,
-	animationSpeed: 1500
-});
-
-
-$('.mainSlider .slides li').css('height', $(window).height());
-
-
-for(var i = 0; i < $('.mainSlider .slides li').length; i++){
-
-    var path = $('.mainSlider .slides li').eq(i).find('img.slide').attr('src');
-	$('.mainSlider .slides li').eq(i).addClass('parallax');
-    $('.mainSlider .slides li').eq(i).css('backgroundImage', 'url("' + path + '")');
-    $('.mainSlider .slides li').eq(i).find('img.slide').detach();
-
-}
-
-
-$(document).scroll(function () {
-
-        var treshhold = Math.round($(window).scrollTop() / 5);
-        $('li.parallax').css('backgroundPosition', '100% ' + treshhold + 'px');
-});
+// $('.mainSlider').flexslider({
+// 	animation: "fade",
+// 	slideshow: true,
+// 	directionNav:false,
+// 	controlNav: true,
+// 	animationSpeed: 1500
+// });
+//
+//
+// $('.mainSlider .slides li').css('height', $(window).height());
+//
+//
+// for(var i = 0; i < $('.mainSlider .slides li').length; i++){
+//
+//     var path = $('.mainSlider .slides li').eq(i).find('img.slide').attr('src');
+// 	$('.mainSlider .slides li').eq(i).addClass('parallax');
+//     $('.mainSlider .slides li').eq(i).css('backgroundImage', 'url("' + path + '")');
+//     $('.mainSlider .slides li').eq(i).find('img.slide').detach();
+//
+// }
+//
+//
+// $(document).scroll(function () {
+//
+//         var treshhold = Math.round($(window).scrollTop() / 5);
+//         $('li.parallax').css('backgroundPosition', '100% ' + treshhold + 'px');
+// });
 
 //---------------------------------- End main slider setup-----------------------------------------//
 
@@ -73,32 +73,32 @@ $(document).scroll(function () {
 //---------------------------------- Team hover -----------------------------------------//
 
 
-$(".thumbs li a span").css({ opacity: 0 });
-
-$('.thumbs li a ').hover( function(){
-	$(this).children('span ').stop().animate({ opacity: 1 }, 'slow');
-	}, function(){
-	$(this).children('span ').stop().animate({ opacity: 0 }, 'slow');
-});
-
-
-$('.teamThumbs').each(function () {
-	    $('.teamThumbs li a').on('click', function(event){
-			event.preventDefault();
-		});
-
-		$('.teamThumbs li a' ).hover(function() {
-			if($('.teamThumbs li a' ).hasClass('tactive')){
-				$('.thumbs li a span').stop().animate({ opacity: 0 }, 'slow');
-				$('.teamThumbs li a').removeClass('tactive');
-			}
-
-			$(this).addClass('tactive');
-			$('.teamDetails .td').hide();
-			$($(this).attr('href')).show();
-	});
-
-});
+// $(".thumbs li a span").css({ opacity: 0 });
+//
+// $('.thumbs li a ').hover( function(){
+// 	$(this).children('span ').stop().animate({ opacity: 1 }, 'slow');
+// 	}, function(){
+// 	$(this).children('span ').stop().animate({ opacity: 0 }, 'slow');
+// });
+//
+//
+// $('.teamThumbs').each(function () {
+// 	    $('.teamThumbs li a').on('click', function(event){
+// 			event.preventDefault();
+// 		});
+//
+// 		$('.teamThumbs li a' ).hover(function() {
+// 			if($('.teamThumbs li a' ).hasClass('tactive')){
+// 				$('.thumbs li a span').stop().animate({ opacity: 0 }, 'slow');
+// 				$('.teamThumbs li a').removeClass('tactive');
+// 			}
+//
+// 			$(this).addClass('tactive');
+// 			$('.teamDetails .td').hide();
+// 			$($(this).attr('href')).show();
+// 	});
+//
+// });
 
 
 //---------------------------------- End team hover-----------------------------------------//
@@ -107,38 +107,38 @@ $('.teamThumbs').each(function () {
 //---------------------------------- Site slider-----------------------------------------//
 
 
-$('.testiSlider').flexslider({
-	animation: "slide",
-	slideshow: true,
-	directionNav:false,
-	controlNav: true
-});
-
-$('.clientSlider').flexslider({
-	animation: "slide",
-	slideshow: true,
-	directionNav:false,
- 	itemWidth: 53,
-    itemMargin: 0,
-    minItems: 2,
-    maxItems: 6,
-	controlNav: false
-});
-
-$('.postSlider, .postSliderLarge').flexslider({
-	animation: "slide",
-	slideshow: true,
-	directionNav:false,
-	controlNav: true
-});
-
-
-$('.projectSlider').flexslider({
-   	animation: "slide",
-	slideshow: true,
-	directionNav:false,
-	controlNav: true
-});
+// $('.testiSlider').flexslider({
+// 	animation: "slide",
+// 	slideshow: true,
+// 	directionNav:false,
+// 	controlNav: true
+// });
+//
+// $('.clientSlider').flexslider({
+// 	animation: "slide",
+// 	slideshow: true,
+// 	directionNav:false,
+//  	itemWidth: 53,
+//     itemMargin: 0,
+//     minItems: 2,
+//     maxItems: 6,
+// 	controlNav: false
+// });
+//
+// $('.postSlider, .postSliderLarge').flexslider({
+// 	animation: "slide",
+// 	slideshow: true,
+// 	directionNav:false,
+// 	controlNav: true
+// });
+//
+//
+// $('.projectSlider').flexslider({
+//    	animation: "slide",
+// 	slideshow: true,
+// 	directionNav:false,
+// 	controlNav: true
+// });
 
 
 
@@ -148,7 +148,7 @@ $('.projectSlider').flexslider({
 
 //---------------------------------- Portfolio -----------------------------------------//
 
-$(".desc").css({ opacity: 0 });
+// $(".desc").css({ opacity: 0 });
 
 //--------------------------------- Hover animation for the elements of the portfolio --------------------------------//
 
