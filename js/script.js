@@ -8,7 +8,7 @@
 // 		jQuery("#loader").delay(400).fadeOut("slow");
 // });
 //
-// $(document).ready(function(){
+$(document).ready(function(){
 // 	var header = $('.mainHeader'),
 // 	pos = header.offset();
 //
