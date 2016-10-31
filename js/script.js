@@ -27,10 +27,10 @@ $(document).ready(function(){
 
 //------------------------------------- Navigation setup ------------------------------------------------//
 
-// $('a.scroll').smoothScroll({
-//         speed: 800,
-//         offset: -65
-// });
+$('a.scroll').smoothScroll({
+        speed: 800,
+        offset: -65
+});
 
 //------------------------------------- End navigation setup ------------------------------------------------//
 
