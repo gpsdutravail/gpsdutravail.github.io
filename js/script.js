@@ -9,20 +9,20 @@
 // });
 //
 $(document).ready(function(){
-	var header = $('.mainHeader'),
-	pos = header.offset();
-
-	$(window).scroll(function(){
-		if($(this).scrollTop() > pos.top+20 && header.hasClass('default')){
-			header.fadeOut('fast', function(){
-				$(this).removeClass('default').addClass('switchedHeader').slideDown(200);
-			});
-		} else if($(this).scrollTop() <= pos.top+20 && header.hasClass('switchedHeader')){
-			header.slideUp(200, function(){
-				$(this).removeClass('switchedHeader').addClass('default').fadeIn(200);
-			});
-		}
-});
+// 	var header = $('.mainHeader'),
+// 	pos = header.offset();
+//
+// 	$(window).scroll(function(){
+// 		if($(this).scrollTop() > pos.top+20 && header.hasClass('default')){
+// 			header.fadeOut('fast', function(){
+// 				$(this).removeClass('default').addClass('switchedHeader').slideDown(200);
+// 			});
+// 		} else if($(this).scrollTop() <= pos.top+20 && header.hasClass('switchedHeader')){
+// 			header.slideUp(200, function(){
+// 				$(this).removeClass('switchedHeader').addClass('default').fadeIn(200);
+// 			});
+// 		}
+// });
 
 
 //------------------------------------- Navigation setup ------------------------------------------------//
